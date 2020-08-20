@@ -458,10 +458,15 @@ export function Button(props: PropsWithChildren<ButtonProps>) {
     }
   }, [isLink]);
 
-  return (
-    <StyledButton as={btnType} {...props}>
-      {buttonInner}
-    </StyledButton>
+  // return (
+  //   <StyledButton as={btnType} {...props}>
+  //     {buttonInner}
+  //   </StyledButton>
+  // );
+  return React.createElement(
+    StyledButton,
+    { as: btnType, ...props, 'data-testid': 'button' },
+    buttonInner
   );
 }
 Button.defaultProps = {
