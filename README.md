@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/acdseen/lionh-ui/badge.svg?branch=master)](https://coveralls.io/github/acdseen/lionh-ui?branch=master)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
