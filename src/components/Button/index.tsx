@@ -68,8 +68,8 @@ const Loading = styled.span`
 `;
 
 export const btnPadding = {
-  small: '13px 20px',
-  medium: '8px 16px',
+  small: '8px 16px',
+  medium: '13px 20px',
 };
 
 // 定义button样式
