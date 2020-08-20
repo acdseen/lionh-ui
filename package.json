@@ -3,7 +3,12 @@
   "version": "0.1.2",
   "private": false,
   "dependencies": {
-    "polished": "^3.6.5"
+    "@types/prismjs": "^1.16.1",
+    "polished": "^3.6.5",
+    "prismjs": "^1.21.0",
+    "react-scripts": "^3.4.3",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "react": "^16.13.1",
