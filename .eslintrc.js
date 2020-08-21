@@ -3,7 +3,10 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: 'react-app',
+  extends: ['react-app','@typescript-eslint'],
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
   rules: {
     // 此规则强制执行统一的行结尾，而不受操作系统，VCS 或整个代码库中使用的编辑器的影响。所以关闭
     'linebreak-style': 0,
@@ -67,8 +70,5 @@ module.exports = {
     'quote-props': [2, 'as-needed', { keywords: false, unnecessary: false, numbers: false }],
     // 禁止使用无关的包 样式报引入的路径不一样
     'import/no-extraneous-dependencies': 0,
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
   },
 };
