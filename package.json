@@ -83,6 +83,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "repository":"https://github.com/acdseen/lionh-ui",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@acdseen"
   }
