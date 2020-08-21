@@ -2,7 +2,7 @@ import React, { HTMLAttributes, useMemo } from 'react';
 import styled, { css } from 'styled-components';
 import { color, typography } from '../shared/styles';
 import { glow } from '../shared/animation';
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 
 export const AvatarSize = {
   large: 40,
