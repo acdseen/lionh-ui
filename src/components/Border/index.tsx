@@ -13,6 +13,6 @@ type BorderProps = {}
 
 export function Border(props: PropsWithChildren< BorderProps>) {
 	const { children } = props;
-	return <div ></div>
-
+	// return <div ></div>
+	return React.createElement('div')
 }
