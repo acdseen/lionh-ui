@@ -137,16 +137,21 @@ export function Avatar(props: AvatarProps) {
     return avatarFigure;
   }, [isLoading, src, username, size]);
 
-  return (
-    <Image
-      size={size}
-      isLoading={isLoading}
-      src={src}
-      {...props}
-      data-testid="avatar-div"
-    >
-      {avatarFigure}
-    </Image>
+  // return (
+  //   <Image
+  //     size={size}
+  //     isLoading={isLoading}
+  //     src={src}
+  //     {...props}
+  //     data-testid="avatar-div"
+  //   >
+  //     {avatarFigure}
+  //   </Image>
+  // );
+  return React.createElement(
+    Image,
+    { size, isLoading, src, ...props, 'data-testid': 'avatar-div' },
+    avatarFigure
   );
 }
 
