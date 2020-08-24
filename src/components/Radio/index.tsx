@@ -157,14 +157,14 @@ export function Radio(props: RadioProps) {
   // 	</RadioWrapper>
   // );
   return React.createElement(RadioWrapper, { className: wrapperClass, style }, [
-    <Label disabled={disabled}>
+    <Label disabled={disabled} key='Label'>
       <Input {...restProps} role="radio" aria-invalid={!!error} type="radio" />
       <span>
         <OptionalText hideLabel={hideLabel}>{label}</OptionalText>
       </span>
     </Label>,
-    error && <Error>{error}</Error>,
-    description && <Description>{description}</Description>,
+    error && <Error key='Error'>{error}</Error>,
+    description && <Description key='Description'>{description}</Description>,
   ]);
 }
 
