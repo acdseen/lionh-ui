@@ -43,6 +43,7 @@
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
     "coveralls": "^3.1.0",
+    "microbundle": "^0.12.3",
     "plop": "^2.7.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -51,7 +52,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -p tsconfig.build.json",
+    "build-cjs": "microbundle build --tsconfig tsconfig.build.json --jsx React.createElement  --compress=false --format cjs",
+    "build-all": "microbundle build  --tsconfig tsconfig.build.json --jsx React.createElement",
+    "build": "npm run build-all & npm run build-cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -81,11 +84,12 @@
   "files": [
     "dist"
   ],
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "repository": "https://github.com/acdseen/lionh-ui",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@acdseen"
-  }
+  },
+  "main": "dist/atom-design-explorer.js",
+	"module": "dist/atom-design-explorer.modern.js"
 }
