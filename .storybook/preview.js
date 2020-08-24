@@ -1,9 +1,17 @@
 
 import React from "react";
 import { GlobalStyle } from "../src/components/shared/global";
-import { addDecorator, addParameters } from "@storybook/react";
+import { addDecorator, addParameters, configure } from "@storybook/react";
 import { withA11y } from "@storybook/addon-a11y";
 
+const loaderFn = () => {
+	return [
+		require("../src/stories/Introduction.stories.mdx"),
+    require("../src/stories/Color.stories.mdx"),
+    require("../src/stories/Typography.stories.mdx"),
+	];
+};
+configure(loaderFn, module);
 addParameters({
   options: {
     showRoots: true,

@@ -3,7 +3,7 @@
 
 ## 说明
 
-测试react-ui组件库项目
+一个react-ui组件库
 
 ## Available Scripts
 
