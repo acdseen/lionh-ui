@@ -3,10 +3,9 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['react-app','@typescript-eslint'],
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
+  extends: ['react-app'],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   rules: {
     // 此规则强制执行统一的行结尾，而不受操作系统，VCS 或整个代码库中使用的编辑器的影响。所以关闭
     'linebreak-style': 0,
@@ -46,7 +45,8 @@ module.exports = {
     // 禁止空块语句
     'no-empty': 0,
     // 允许函数存在未使用的参数
-    'no-unused-vars': [0, { args: 'none' }],
+    'no-unused-vars': 0,
+    "@typescript-eslint/no-unused-vars": 0,
     // 指定不希望在应用程序中使用的全局变量名称
     'no-restricted-globals': 0,
     // 允许使用按位运算符
